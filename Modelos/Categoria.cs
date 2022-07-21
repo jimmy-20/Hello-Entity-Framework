@@ -5,7 +5,7 @@ namespace Proyecto.Modelos
     public class Categoria
     {
         [Key]
-        public Guid IdCategoria {get;set;}
+        public Guid CategoriaId {get;set;}
 
         [Required]
         [MaxLength(150)]

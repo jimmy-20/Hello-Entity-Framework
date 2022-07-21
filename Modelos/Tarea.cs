@@ -6,17 +6,21 @@ namespace Proyecto.Modelos
     public class Tarea
     {
         [Key]
-        public Guid IdTarea {get;}
+        public Guid TareaId {get;set;}
 
-        [ForeignKey("IdCategoria")]
-        public Guid IdCategoria {get;set;}
+        [ForeignKey("CategoriaId")]
+        public Guid CategoriaId {get;set;}
 
         [Required]
         [MaxLength(200)]
         public string Titulo {get;set;}
+
         public string Descripcion {get;set;}
+
         public Prioridad Prioridad {get;set;}
+
         public DateTime FechaCreacion {get;set;}
+
         public virtual Categoria Categoria {get;set;}
 
         [NotMapped]
