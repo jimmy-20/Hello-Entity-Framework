@@ -12,6 +12,7 @@ namespace Proyecto.Modelos
         public string Descripcion {get;set;}
         public Prioridad Prioridad {get;set;}
         public DateTime FechaCreacion {get;set;}
+        public DateTime FechaFinalizacion {get;set;}
         public virtual Categoria Categoria {get;set;}
         public string Resumen {get;set;}
     }
