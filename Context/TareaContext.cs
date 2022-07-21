@@ -20,10 +20,8 @@ public class TareaContext : DbContext
             //Llave Primaria
             categoria.HasKey(c => c.CategoriaId);
 
-            //LLave Foranea
-            categoria.Property(c => c.Nombre).HasMaxLength(150).IsRequired();
-
             //Propiedades
+            categoria.Property(c => c.Nombre).HasMaxLength(150).IsRequired();
             categoria.Property(c => c.Descripcion);
         });
 
