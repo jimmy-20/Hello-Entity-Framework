@@ -5,7 +5,7 @@ using Proyecto.Context;
 var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddDbContext<TareaContext>(p => p.UseInMemoryDatabase("TareasDB"));
-builder.Services.AddSqlServer<TareaContext>("Data Source = DESKTOP-ATV4JNH; Initial Catalog = TareasDb; User id = sa; password = JasoYT.2002");
+builder.Services.AddSqlServer<TareaContext>(builder.Configuration.GetConnectionString("cnTareas"));
 
 var app = builder.Build();
 
